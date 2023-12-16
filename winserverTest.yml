@@ -1,12 +1,11 @@
 ---
-
 - hosts: all
   gather_facts: no
-  become: true
+  become: false
   tasks:
     - name: Create apples.txt file
-      become: false
       file:
-        path: /home/tanshine/Desktop/apples.txt  
+        path: /home/tanshine/Desktop/apples.txt
         state: touch
-        mode: '0644'  
+        mode: '0644'
+

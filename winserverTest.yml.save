@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  gather_facts: no
+  become: true
+  tasks:
+    - name:
+ Create apples.txt file
+      file:
+        path: /home/tanshine/Desktop/apples.txt  
+        state: touch
+        mode: '0644'  
