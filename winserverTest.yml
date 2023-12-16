@@ -1,9 +1,11 @@
 ---
 
 - hosts: all
+  gather_facts: no
   become: true
   tasks:
     - name: Create apples.txt file
+      become: false
       file:
         path: /home/tanshine/Desktop/apples.txt  
         state: touch
